@@ -6,9 +6,8 @@ import (
 
 	"github.com/gin-gonic/contrib/static"
 
-	"go-example/internal/ldap"
-
 	"github.com/gin-gonic/gin"
+	ldap "github.com/Somphoph/git-structure-example/ldap"
 )
 
 type Joke struct {
@@ -54,7 +53,7 @@ func main() {
 }
 
 func LdapConnect(c *gin.Context) {
-	LdapAuthen()
+	ldap.LdapAuthen()
 	c.Header("Content-Type", "application/json")
 	c.JSON(http.StatusOK, "Connected")
 }
