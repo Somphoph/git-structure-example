@@ -1,0 +1,1 @@
+# git-structure-example
